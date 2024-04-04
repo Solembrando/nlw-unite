@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+
+    <script>
+      dayjs.extend(window.dayjs_plugin_relativeTime)
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+
+    <script>
+      dayjs.locale('pt-br')
+    </script>
+
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="7.11111" fill="#F48F56"></rect>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0682 15.0583V12.7586L5.71097 15.12H5.69678V17.482H5.7109L12.0682 19.8462V17.54115L8.80823 16.2975L12.0682 15.0583Z" fill="#00292E"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6328 18.0617L22.89 16.8248L19.6328 15.5878V13.2881L25.9829 15.6522H25.9998V18.0164H25.9829L19.6328 20.3686V18.0617ZM16.9057 10.0309L13.1708 22.0165H15.387L19.1219 10.0309H16.9057Z" fill="#00292E"></path>
+        </svg>
+
+      </header>
+
+      <form onsubmit="adicionarParticipante(event)">
+        <fieldset>
+          <legend>Inscrição</legend>
+          <div>
+            <div class="input-wrapper">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4003_2796)">
+                  <path d="M12 13.3333C12 12.2724 11.5786 11.255 10.8284 10.5048C10.0783 9.75468 9.06087 9.33325 8 9.33325C6.93913 9.33325 5.92172 9.75468 5.17157 10.5048C4.42143 11.255 4 12.2724 4 13.3333" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7.99992 9.33333C9.47268 9.33333 10.6666 8.13943 10.6666 6.66667C10.6666 5.19391 9.47268 4 7.99992 4C6.52716 4 5.33325 5.19391 5.33325 6.66667C5.33325 8.13943 6.52716 9.33333 7.99992 9.33333Z" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M7.99992 14.6666C11.6818 14.6666 14.6666 11.6818 14.6666 7.99992C14.6666 4.31802 11.6818 1.33325 7.99992 1.33325C4.31802 1.33325 1.33325 4.31802 1.33325 7.99992C1.33325 11.6818 4.31802 14.6666 7.99992 14.6666Z" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4003_2796">
+                    <rect width="16" height="16" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <input type="text" placeholder="Nome Completo" name="nome" required="">
+            </div>
+
+            <div class="input-wrapper">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6016_315)">
+                  <path d="M8.49992 10.6668C9.97268 10.6668 11.1666 9.47292 11.1666 8.00016C11.1666 6.5274 9.97268 5.3335 8.49992 5.3335C7.02716 5.3335 5.83325 6.5274 5.83325 8.00016C5.83325 9.47292 7.02716 10.6668 8.49992 10.6668Z" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M11.1666 5.3335V8.66683C11.1666 9.19727 11.3773 9.70598 11.7524 10.081C12.1275 10.4561 12.6362 10.6668 13.1666 10.6668C13.697 10.6668 14.2057 10.4561 14.5808 10.081C14.9559 9.70598 15.1666 9.19727 15.1666 8.66683V8.00017C15.1666 6.49837 14.6595 5.04057 13.7275 3.86295C12.7955 2.68533 11.4932 1.85688 10.0316 1.51184C8.56999 1.1668 7.03468 1.32537 5.67444 1.96187C4.31419 2.59837 3.2087 3.6755 2.53708 5.01874C1.86545 6.36199 1.66704 7.89266 1.97399 9.36276C2.28094 10.8328 3.07527 12.1562 4.22828 13.1185C5.38128 14.0808 6.82542 14.6256 8.32671 14.6646C9.828 14.7036 11.2985 14.2346 12.4999 13.3335" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6016_315">
+                    <rect width="16" height="16" fill="white" transform="translate(0.5)"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <input type="email" placeholder="Email" name="email" required="">
+            </div>
+
+            <button>
+              REALIZAR INSCRIÇÃO
+            </button>
+          </div>
+        </fieldset>
+      </form>
+
+      <section class="lista-participantes">
+        <h2>Participantes</h2>
+        <div>
+
+          <table width="100%">
+            <thead style="text-align: left">
+              <tr>
+                <th>Participantes</th>
+                <th>Data da inscrição</th>
+                <th>Data do check-in</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </body>
+
+</html>
