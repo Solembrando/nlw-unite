@@ -1,14 +1,14 @@
 let participantes = [
   {
     nome: "Alec Matos",
-    email: "alecmatos5@gmail.com",
+    email: "alecmatos@gmail.com",
     dataInscricao: 
     new Date(2024,3,13,20,00),
     dataCheckIn: null
   },
   {
-    nome: "Rachel Pinho",
-    email: "rachelpinho43@gmail.com",
+    nome: "Rachel Santos",
+    email: "rachel@gmail.com",
     dataInscricao: 
     new Date(2024,3,11,19,30),
     dataCheckIn: null
